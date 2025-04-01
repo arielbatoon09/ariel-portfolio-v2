@@ -22,8 +22,8 @@ export function StatusIndicator() {
             <span className="invisible h-0">Reach out</span>
           </span>
           <span className="group-hover:-translate-y-full absolute top-full flex items-center transition-all duration-500 ease-out">
+            <Mail className="mr-1 w-4 h-4" />
             Reach out
-            <Mail className="ml-1 mt-1 w-4 h-4" />
           </span>
         </p>
       </div>

@@ -1,5 +1,9 @@
-export default function Home() {
+import { AboutProfile } from "@/components/content/AboutProfile";
+
+export default function About() {
   return (
-    <div>About</div>
+    <>
+      <AboutProfile className="pt-32 pb-10 md:pb-24 md:pt-40" />
+    </>
   );
 }

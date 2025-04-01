@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { StatusIndicator } from "../common/StatusIndicator";
 import { Socials } from "./Socials";
+import { Calendar } from "lucide-react";
 
 export function HeroBanner({ className }: { className?: string }) {
   return (
@@ -10,19 +11,19 @@ export function HeroBanner({ className }: { className?: string }) {
       <div className="container max-w-screen-lg mx-auto px-4">
         <article className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center">
           {/* Text Content */}
-          <div>
+          <div className="space-y-6">
             <StatusIndicator />
-            <h1 className="font-bold w-full text-4xl leading-9">Hey, I’m Ariel
+            <h1 className="font-bold w-full font-sans text-4xl md:text-5xl text-black/90 leading-9 -mt-3">Hey, I'm Ariel
               <span className="ml-1 inline-block origin-bottom-right animate-wave cursor-pointer">
                 <Image className="" src="/waving-hand.svg" height={42} width={42} alt="wave hand" />
               </span>
             </h1>
-            <p className="leading-relaxed py-4">
-              A full-stack developer specializing in JavaScript & PHP. I create high-performance websites, web applications, and SEO-driven solutions.
+            <p className="leading-relaxed text-black/80 font-sans">
+              I help businesses scale with custom-built websites and web applications. Let's bring your ideas to life!
             </p>
             <div className="flex flex-col md:flex-row gap-2">
-              <Button>Get a Free Quote</Button>
-              <Button variant="outline">Let’s Talk</Button>
+              <Button size="lg"><Calendar /> Free Consultation</Button>
+              <Button size="lg" variant="outline">Explore Services</Button>
             </div>
             <div className="hidden md:block">
               <Socials />

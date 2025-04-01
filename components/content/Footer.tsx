@@ -24,12 +24,12 @@ interface FooterProps {
 export function Footer({ data }: FooterProps) {
   return (
     <footer className="bg-gray-50">
-      <div className="container max-w-screen-lg mx-auto px-4 py-4">
+      <div className="container max-w-screen-lg mx-auto px-4 py-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-24">
           {/* About Column */}
           {data.map((item, index) => (
             <div key={index} className="space-y-2">
-              <h3 className="font-bold text-lg">{item.title}</h3>
+              <h3 className="font-semibold text-lg text-black/80">{item.title}</h3>
               {item.description && (
                 <p className="text-sm text-black/75">{item.description}</p>
               )}

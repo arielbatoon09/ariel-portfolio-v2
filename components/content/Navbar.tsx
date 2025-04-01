@@ -39,7 +39,7 @@ export function Navbar() {
       <header
         className={cn(
           "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-          isScrolled && !isMenuOpen ? "backdrop-blur-md bg-white/50" : "bg-white"
+          isScrolled && !isMenuOpen ? "backdrop-blur-md bg-white/50" : "bg-gray-50"
         )}
       >
         <nav className="container max-w-screen-lg mx-auto flex justify-between items-center px-4 py-4 relative">
@@ -76,7 +76,7 @@ export function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-black/90 hover:text-brand transition-colors z-50"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X className="text-black/75" size={24} /> : <Menu className="text-black/75" size={24} />}
           </button>
         </nav>
       </header>
@@ -84,7 +84,7 @@ export function Navbar() {
       {/* Mobile Menu (Placed under the navbar) */}
       <div
         className={cn(
-          "fixed top-[64px] left-0 w-full bg-white shadow-md transition-transform transform z-40 md:hidden",
+          "fixed top-[64px] left-0 w-full bg-gray-50 shadow-md transition-transform transform z-40 md:hidden",
           isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         )}
       >
