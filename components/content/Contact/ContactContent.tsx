@@ -28,7 +28,7 @@ export function ContactContent() {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-6">
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-lg shadow-lg text-white">
+        <div className="bg-gradient-to-br from-black/90 to-black/80 p-6 rounded-lg shadow-lg text-white">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-white/10 rounded-lg">
               <Mail className="w-5 h-5 text-white" />
@@ -44,7 +44,7 @@ export function ContactContent() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-lg shadow-lg text-white">
+        <div className="bg-gradient-to-br from-black/90 to-black/80 p-6 rounded-lg shadow-lg text-white">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-white/10 rounded-lg">
               <Phone className="w-5 h-5 text-white" />
@@ -61,7 +61,7 @@ export function ContactContent() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-lg shadow-lg">
+      <div className="bg-gradient-to-br from-black/90 to-black/80 p-6 rounded-lg shadow-lg">
         <div className="flex items-center gap-3 mb-6">
           <div className="p-2 bg-white/10 rounded-lg">
             <MessageSquare className="w-5 h-5 text-white" />
