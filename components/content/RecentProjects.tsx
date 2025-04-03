@@ -2,12 +2,9 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ProjectCard } from "@/components/common/ProjectCard";
 import { ProjectData } from "@/lib/data/projects";
-import { BlurFade } from "@/components/ui/blur-fade";
 import { ArrowRight } from "lucide-react";
 
-const BLUR_FADE_DELAY = 0.04;
-
-export function RecentProjects({  className }: { className?: string }) {
+export function RecentProjects({ className }: { className?: string }) {
   return (
     <section className={cn("bg-gray-50", className)}>
       <div className="container max-w-screen-lg mx-auto px-4 space-y-8">
@@ -21,19 +18,16 @@ export function RecentProjects({  className }: { className?: string }) {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 mx-auto">
           {ProjectData.data.map((project, id) => (
-            <BlurFade key={project.title + id} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
-              <ProjectCard
-                href={project.href}
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                dates={project.dates}
-                tags={project.technologies}
-                image={project.image}
-                video={project.video}
-                links={project.links}
-              />
-            </BlurFade>
+            <ProjectCard key={id}
+              href={project.href}
+              title={project.title}
+              description={project.description}
+              dates={project.dates}
+              tags={project.technologies}
+              image={project.image}
+              video={project.video}
+              links={project.links}
+            />
           ))}
         </div>
 

@@ -10,12 +10,16 @@ export function Contact({ className }: { className?: string }) {
       <div className="container max-w-screen-lg mx-auto px-4 py-12">
         <div className="max-w-xl mx-auto text-center mb-10">
           <h2 className="text-3xl font-bold mb-3">Let&apos;s get in touch!</h2>
-          <p className="text-gray-600">You can reach us at the following</p>
+          <p className="text-gray-600">You can reach me at the following</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          <ContactContent />
-          <ContactForm />
+          <div className="order-2 md:order-1">
+            <ContactContent />
+          </div>
+          <div className="order-1 md:order-2">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>

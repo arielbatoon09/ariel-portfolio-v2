@@ -33,6 +33,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const inquiryTypes = [
   "Just saying hello",
+  "Free Consultation",
   "Marketing Website",
   "Custom Software",
   "Minimum Viable Product (MVP)",
@@ -180,12 +181,12 @@ export function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="font-medium text-black/90">
-                  How can we help you?
+                  How can I help you?
                   <span className="text-gray-400 text-xs ml-2">Max 500 characters</span>
                 </FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Tell us a little bit about your project..."
+                    placeholder="Write your message here..."
                     className={cn(
                       "min-h-[100px]",
                       form.formState.errors.message && "border-red-500 focus-visible:ring-red-500"
@@ -198,7 +199,7 @@ export function ContactForm() {
             )}
           />
 
-          <Button type="submit" className="w-full mt-2">
+          <Button size="lg" type="submit" className="w-full mt-2">
             Submit
           </Button>
         </form>

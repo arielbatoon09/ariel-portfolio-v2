@@ -25,11 +25,6 @@ export const ExperienceData = {
       "title": "Full-stack Developer",
       "company": "Freelance",
       "date": "Feb 2023 - Present",
-    },
-    {
-      "title": "BS Information Technology",
-      "company": "Cordova Public College",
-      "date": "Jun 2024",
     }
   ]
 };

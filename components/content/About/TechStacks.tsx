@@ -57,11 +57,11 @@ export function TechStacks({ className }: { className?: string }) {
             >
               {isExpanded ? (
                 <>
-                  Show Less <ChevronUp className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
+                  Show Less <ChevronUp className="h-3 w-3 sm:h-4 sm:w-4" />
                 </>
               ) : (
                 <>
-                  Show More Categories <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
+                  Show More <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4" />
                 </>
               )}
             </Button>
