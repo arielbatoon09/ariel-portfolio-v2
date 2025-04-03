@@ -24,7 +24,7 @@ interface FooterProps {
 export function Footer({ data }: FooterProps) {
   return (
     <footer className="bg-gray-50">
-      <div className="container max-w-screen-lg mx-auto px-4 py-10">
+      <div className="container max-w-screen-lg mx-auto px-4 py-10 border-t border-black/5">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-24">
           {/* About Column */}
           {data.map((item, index) => (
@@ -55,7 +55,7 @@ export function Footer({ data }: FooterProps) {
           ))}
         </div>
 
-        <div className="text-center py-4 mt-6 border-t border-black/20">
+        <div className="text-center py-4 mt-6">
           <p className="text-sm text-gray-500 -mb-4">
             © {new Date().getFullYear()} Ariel Batoon. All rights reserved.
           </p>

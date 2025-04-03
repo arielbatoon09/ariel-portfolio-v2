@@ -19,11 +19,11 @@ export function HeroBanner({ className }: { className?: string }) {
               </span>
             </h1>
             <p className="leading-relaxed text-black/80 font-sans">
-              I help businesses scale with custom-built websites and web applications. Let's bring your ideas to life!
+              A Solo Software Developer building apps and websites that are both functional and visually stunning.
             </p>
             <div className="flex flex-col md:flex-row gap-2">
               <Button size="lg"><Calendar /> Free Consultation</Button>
-              <Button size="lg" variant="outline">Explore Services</Button>
+              <Button size="lg" variant="outline">Explore Projects</Button>
             </div>
             <div className="hidden md:block">
               <Socials />
