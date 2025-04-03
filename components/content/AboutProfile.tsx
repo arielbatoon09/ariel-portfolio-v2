@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
 
 export function AboutProfile({ className }: { className?: string }) {
   return (

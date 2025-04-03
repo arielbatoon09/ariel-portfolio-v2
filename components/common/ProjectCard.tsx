@@ -9,7 +9,7 @@ interface CardProps {
   title: string;
   href?: string;
   description: string;
-  dates: string;
+  dates?: string;
   tags: readonly string[];
   link?: string;
   image?: string;
@@ -23,7 +23,7 @@ interface CardProps {
 }
 
 export function ProjectCard(props: CardProps) {
-  const { title, href, description, dates, tags, link, image, video, links, className } = props;
+  const { title, href, description, tags, link, image, video, links, className } = props;
   return (
     <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full !pt-0 pb-1 !gap-0">
       <Link href={href || "#"} className={cn(

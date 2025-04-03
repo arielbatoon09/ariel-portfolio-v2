@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BriefcaseBusiness, Facebook, Linkedin, Github, Twitter } from "lucide-react";
 
 export function AboutMe({ className }: { className?: string }) {
@@ -15,7 +15,7 @@ export function AboutMe({ className }: { className?: string }) {
       </CardHeader>
       <CardContent className="space-y-4">
         <p>
-          Hi there, I'm <span className="whitespace-nowrap border w-max border-[#EBEBEB] text-[13px] rounded-[0.375rem] py-[3px] px-[5px]">Ariel</span>. I'm a Software Developer passionate on developing high-performance applications that seamlessly bridge web and mobile experiences.
+          Hi there, I&apos;m <span className="whitespace-nowrap border w-max border-[#EBEBEB] text-[13px] rounded-[0.375rem] py-[3px] px-[5px]">Ariel</span>. I&apos;m a Software Developer passionate on developing high-performance applications that seamlessly bridge web and mobile experiences.
         </p>
 
         <p>
@@ -23,12 +23,12 @@ export function AboutMe({ className }: { className?: string }) {
         </p>
 
         <p>
-          With nearly three years of experience spanning freelance and corporate, I've worked on everything from sleek marketing websites to enterprise-grade applications. My approach is always rooted in efficiency, scalability, and innovation.
+          With nearly three years of experience spanning freelance and corporate, I&apos;ve worked on everything from sleek marketing websites to enterprise-grade applications. My approach is always rooted in efficiency, scalability, and innovation.
           I collaborate with both local and international clients, helping businesses turn ideas into impactful digital products.
         </p>
 
         <p>
-          Recently, I'm currently focused on integrating AI into applications to enhance automation, efficiency, and user engagement.
+          Recently, I&apos;m currently focused on integrating AI into applications to enhance automation, efficiency, and user engagement.
         </p>
 
         <div className="flex gap-14 mt-4">

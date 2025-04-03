@@ -13,7 +13,7 @@ export function HeroBanner({ className }: { className?: string }) {
           {/* Text Content */}
           <div className="space-y-6">
             <StatusIndicator />
-            <h1 className="font-bold w-full font-sans text-4xl md:text-5xl text-black/90 leading-9 -mt-3">Hey, I'm Ariel
+            <h1 className="font-bold w-full font-sans text-4xl md:text-5xl text-black/90 leading-9 -mt-3">Hey, I&apos;m Ariel
               <span className="ml-1 inline-block origin-bottom-right animate-wave cursor-pointer">
                 <Image className="" src="/waving-hand.svg" height={42} width={42} alt="wave hand" />
               </span>

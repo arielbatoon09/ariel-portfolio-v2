@@ -1,5 +1,7 @@
+import { Contact } from "@/components/content/Contact";
+
 export default function Home() {
   return (
-    <div>Contact</div>
+    <Contact className="py-20" />
   );
 }

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { AboutMe } from "./About/AboutMe";
 import { Experience } from "./About/Experience";
