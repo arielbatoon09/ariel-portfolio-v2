@@ -53,10 +53,28 @@ export function ContactForm() {
 
   const onSubmit = async (data: FormValues) => {
     try {
-      console.log(data);
+      const formData = new FormData();
+      formData.append('fname', data.fname);
+      formData.append('lname', data.lname);
+      formData.append('email', data.email);
+      formData.append('inquiry', data.inquiry);
+      formData.append('message', data.message);
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      // Reset form on success
       form.reset();
+      alert('Message sent successfully!');
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error('Error submitting form:', error);
+      alert('Failed to send message. Please try again.');
     }
   };
 
