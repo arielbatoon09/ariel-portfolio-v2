@@ -1,6 +1,20 @@
 import { AlertCircle, X } from "lucide-react";
 import { useState } from "react";
 
+function getFormattedDate() {
+  const date = new Date();
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  
+  const month = months[date.getMonth()];
+  const day = date.getDate().toString().padStart(2, '0');
+  const year = date.getFullYear();
+
+  return `${month} ${day}, ${year}`;
+}
+
 export function NoticeBanner() {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -16,7 +30,7 @@ export function NoticeBanner() {
             </span>
             <p className="ml-3 font-medium text-yellow-800">
               This website is currently under development.
-              <span className="inline md:block text-xs text-yellow-700 ml-2 md:ml-0">March 04, 2025</span>
+              <span className="inline md:block text-xs text-yellow-700 ml-2 md:ml-0">{getFormattedDate()}</span>
             </p>
           </div>
           <button
