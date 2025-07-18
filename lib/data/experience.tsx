@@ -16,15 +16,15 @@ export const ExperienceData = {
       "date": "Nov 2022 - Nov 2023",
     },
 
-    {
-      "title": "College Instructor (Part-time)",
-      "company": "Cordova Public College",
-      "date": "Jan 2025 - Present",
-    },
-    {
-      "title": "Full-stack Developer",
-      "company": "Freelance",
-      "date": "Feb 2023 - Present",
-    }
+    // {
+    //   "title": "College Instructor (Part-time)",
+    //   "company": "Cordova Public College",
+    //   "date": "Jan 2025 - Present",
+    // },
+    // {
+    //   "title": "Full-stack Developer",
+    //   "company": "Freelance",
+    //   "date": "Feb 2023 - Present",
+    // }
   ]
 };
