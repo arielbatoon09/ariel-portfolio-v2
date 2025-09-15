@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { NavigationData } from "@/lib/data/navigations";
-import { NoticeBanner } from "@/components/ui/notice-banner";
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ export function Navbar() {
           isScrolled && !isMenuOpen ? "backdrop-blur-md bg-white/50" : "bg-gray-50"
         )}
       >
-        <NoticeBanner />
+        {/* <NoticeBanner /> */}
         <nav className="container max-w-screen-lg mx-auto flex justify-between items-center px-4 py-4 relative">
           {/* Branding */}
           <Link href="/" className="flex flex-col z-50">

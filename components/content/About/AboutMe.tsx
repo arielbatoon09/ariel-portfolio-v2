@@ -36,19 +36,19 @@ export function AboutMe({ className }: { className?: string }) {
             <h3 className="text-black/75 font-medium">Socials</h3>
             <div className="flex items-center gap-2 hover:text-black/80 transition-colors duration-300">
               <Linkedin size={14} />
-              <Link href="https://www.linkedin.com/in/ariel-zhang/" target="_blank" className="text-sm mt-0.5">LinkedIn</Link>
+              <Link href="https://www.linkedin.com/in/arielbatoon/" target="_blank" className="text-sm mt-0.5">LinkedIn</Link>
             </div>
             <div className="flex items-center gap-2 hover:text-black/80 transition-colors duration-300">
               <Github size={14} />
-              <Link href="https://www.linkedin.com/in/ariel-zhang/" target="_blank" className="text-sm mt-0.5">GitHub</Link>
+              <Link href="https://github.com/arielbatoon09" target="_blank" className="text-sm mt-0.5">GitHub</Link>
             </div>
             <div className="flex items-center gap-2 hover:text-black/80 transition-colors duration-300">
               <Twitter size={14} />
-              <Link href="https://www.linkedin.com/in/ariel-zhang/" target="_blank" className="text-sm mt-0.5">Twitter</Link>
+              <Link href="https://x.com/arielbatoon_com" target="_blank" className="text-sm mt-0.5">Twitter</Link>
             </div>
             <div className="flex items-center gap-2 hover:text-black/80 transition-colors duration-300">
               <Facebook size={14} />
-              <Link href="https://www.linkedin.com/in/ariel-zhang/" target="_blank" className="text-sm mt-0.5">Facebook</Link>
+              <Link href="https://www.facebook.com/itsarielbatoon/" target="_blank" className="text-sm mt-0.5">Facebook</Link>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export function AboutMe({ className }: { className?: string }) {
           </div>
         </div>
 
-        <Link href="/" target="_blank">
+        <Link href="https://docs.google.com/document/d/1lPeJiZvXMfvb_KzNv4XROWRX2kel4v-H/edit?usp=sharing&ouid=113866748336192238785&rtpof=true&sd=true" target="_blank">
           <Button>Download Resume</Button>
         </Link>
       </CardContent>

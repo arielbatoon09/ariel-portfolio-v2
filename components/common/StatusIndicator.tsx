@@ -18,7 +18,7 @@ export function StatusIndicator() {
       <div className="relative cursor-pointer overflow-hidden">
         <p className="group text-muted-foreground">
           <span className="group-hover:-translate-y-full font-semibold items-center text-emerald-700 flex flex-col transition-all duration-500 ease-out">
-            Open to work
+            Message me
             <span className="invisible h-0">Reach out</span>
           </span>
           <span className="group-hover:-translate-y-full absolute top-full flex items-center transition-all duration-500 ease-out">

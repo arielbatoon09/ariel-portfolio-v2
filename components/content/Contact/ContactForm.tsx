@@ -2,7 +2,6 @@
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -31,15 +30,6 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const inquiryTypes = [
-  "Just saying hello",
-  "Free Consultation",
-  "Marketing Website",
-  "Custom Software",
-  "Minimum Viable Product (MVP)",
-  "Others"
-] as const;
-
 export function ContactForm() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -48,7 +38,6 @@ export function ContactForm() {
       lname: "",
       email: "",
       message: "",
-      inquiry: "",
     },
   });
 
@@ -58,7 +47,6 @@ export function ContactForm() {
       formData.append('fname', data.fname);
       formData.append('lname', data.lname);
       formData.append('email', data.email);
-      formData.append('inquiry', data.inquiry);
       formData.append('message', data.message);
 
       const response = await fetch('/api/contact', {
@@ -144,33 +132,6 @@ export function ContactForm() {
                   />
                 </FormControl>
                 <FormMessage className="font-normal" />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="inquiry"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="font-medium text-black/90">Type of Inquiry</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger className={cn(
-                      form.formState.errors.inquiry && "border-red-500 focus-visible:ring-red-500"
-                    )}>
-                      <SelectValue placeholder="Select type of inquiry" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {inquiryTypes.map((type) => (
-                      <SelectItem key={type} value={type}>
-                        {type}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
               </FormItem>
             )}
           />

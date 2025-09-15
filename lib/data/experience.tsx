@@ -15,16 +15,15 @@ export const ExperienceData = {
       "company": "GrowthOps Asia",
       "date": "Nov 2022 - Nov 2023",
     },
-
-    // {
-    //   "title": "College Instructor (Part-time)",
-    //   "company": "Cordova Public College",
-    //   "date": "Jan 2025 - Present",
-    // },
-    // {
-    //   "title": "Full-stack Developer",
-    //   "company": "Freelance",
-    //   "date": "Feb 2023 - Present",
-    // }
+    {
+      "title": "Software Developer",
+      "company": "Freelancer",
+      "date": "2022 - Present",
+    },
+    {
+      "title": "Wrote my first line of code 👋🏻",
+      "company": "Cordova Public College",
+      "date": "2020",
+    },
   ]
 };

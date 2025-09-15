@@ -19,7 +19,7 @@ export function HeroBanner({ className }: { className?: string }) {
               </span>
             </h1>
             <p className="leading-relaxed text-black/80 font-sans">
-              A Solo Software Developer building apps and websites that are both functional and visually stunning.
+              A passionate Software Developer dedicated on building websites, web applications, mobile apps, and custom software that are not only highly functional but also visually captivating.
             </p>
             <div className="flex flex-col md:flex-row gap-2">
               <Button size="lg"><Calendar /> Free Consultation</Button>
@@ -33,8 +33,8 @@ export function HeroBanner({ className }: { className?: string }) {
           {/* Image Container */}
           <div>
             <div className="relative w-full h-full bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl overflow-hidden flex items-center justify-center shadow-lg">
-              <Image src="/ariel-banner-image.png" alt="Ariel Batoon Profile" height={500}
-                width={350} className="object-cover" style={{ width: "auto", height: "auto" }}
+              <Image src="/ariel-profile.jpg" alt="Ariel Batoon Profile" height={500}
+                width={500} className="object-cover" style={{ width: "auto", height: "auto" }}
                 priority
               />
             </div>

@@ -10,19 +10,21 @@ import { Search } from "lucide-react";
 
 export function ProjectListing({ className }: { className?: string }) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedTech, setSelectedTech] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // Get unique technologies from all projects
-  const allTechnologies = Array.from(
-    new Set(ProjectData.data.flatMap((project) => project.technologies))
-  ).sort();
+  // Define the categories to display in the filter
+  const categories = [
+    { label: "Websites", value: "Website" },
+    { label: "Web Apps", value: "Web Application" },
+  ];
 
-  // Filter projects based on search query and selected technology
+  // Filter projects based on search query, selected technology, and selected category
   const filteredProjects = ProjectData.data.filter((project) => {
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch =
+      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesTech = !selectedTech || project.technologies.includes(selectedTech);
-    return matchesSearch && matchesTech;
+    const matchesCategory = !selectedCategory || project.category === selectedCategory;
+    return matchesSearch && matchesCategory;
   });
 
   return (
@@ -47,23 +49,24 @@ export function ProjectListing({ className }: { className?: string }) {
               className="pl-10"
             />
           </div>
-          
+
+          {/* Category Filter */}
           <div className="flex flex-wrap gap-2">
             <Badge
-              variant={selectedTech === null ? "default" : "outline"}
+              variant={selectedCategory === null ? "default" : "outline"}
               className="cursor-pointer hover:bg-black/10 transition-colors"
-              onClick={() => setSelectedTech(null)}
+              onClick={() => setSelectedCategory(null)}
             >
               All
             </Badge>
-            {allTechnologies.map((tech) => (
+            {categories.map((cat) => (
               <Badge
-                key={tech}
-                variant={selectedTech === tech ? "default" : "outline"}
+                key={cat.value}
+                variant={selectedCategory === cat.value ? "default" : "outline"}
                 className="cursor-pointer hover:bg-black/10 transition-colors"
-                onClick={() => setSelectedTech(tech)}
+                onClick={() => setSelectedCategory(cat.value)}
               >
-                {tech}
+                {cat.label}
               </Badge>
             ))}
           </div>
@@ -72,11 +75,11 @@ export function ProjectListing({ className }: { className?: string }) {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project, index) => (
-              <ProjectCard key={index}
+            <ProjectCard
+              key={index}
               href={project.href}
               title={project.title}
               description={project.description}
-              dates={project.dates}
               tags={project.technologies}
               image={project.image}
               video={project.video}

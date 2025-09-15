@@ -10,7 +10,7 @@ export function AboutProfile({ className }: { className?: string }) {
             <div className="absolute w-full flex flex-col md:flex-row items-center md:items-end md:justify-start gap-3 md:gap-6 left-0 px-4 md:px-6 bottom-[-6rem] md:bottom-[-4.5rem]">
               <Image
                 className="ring-4 bg-gradient-to-br from-gray-900 to-gray-700 size-24 md:size-38 transition-all duration-300 hover:scale-105 ring-neutral-700/20 aspect-square rounded-full"
-                src="/ariel-banner-image.png"
+                src="/ariel-profile.jpg"
                 height={300}
                 width={300}
                 alt="Profile"

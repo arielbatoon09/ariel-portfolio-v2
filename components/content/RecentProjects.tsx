@@ -17,12 +17,12 @@ export function RecentProjects({ className }: { className?: string }) {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 mx-auto">
-          {ProjectData.data.map((project, id) => (
-            <ProjectCard key={id}
+          {ProjectData.data.slice(0, 3).map((project, id) => (
+            <ProjectCard
+              key={id}
               href={project.href}
               title={project.title}
               description={project.description}
-              dates={project.dates}
               tags={project.technologies}
               image={project.image}
               video={project.video}

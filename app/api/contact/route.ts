@@ -8,7 +8,6 @@ export async function POST(request: Request) {
     const fname = formData.get('fname') as string;
     const lname = formData.get('lname') as string;
     const email = formData.get('email') as string;
-    const inquiry = formData.get('inquiry') as string;
     const message = formData.get('message') as string;
 
     // Construct email content
@@ -16,7 +15,6 @@ export async function POST(request: Request) {
       <h2>New Contact Form Submission</h2>
       <p><strong>Name:</strong> ${fname} ${lname}</p>
       <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Inquiry Type:</strong> ${inquiry}</p>
       <p><strong>Message:</strong></p>
       <p>${message}</p>
     `;
@@ -25,7 +23,6 @@ export async function POST(request: Request) {
       New Contact Form Submission
       Name: ${fname} ${lname}
       Email: ${email}
-      Inquiry Type: ${inquiry}
       Message: ${message}
     `;
 

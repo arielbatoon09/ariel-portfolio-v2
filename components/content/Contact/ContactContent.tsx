@@ -11,17 +11,17 @@ export function ContactContent() {
     {
       name: "GitHub",
       icon: <Github className="w-5 h-5" />,
-      href: "https://github.com/arielbatoon09",
+      href: "https://github.com/arielbatoon09/",
     },
     {
       name: "Twitter",
       icon: <Twitter className="w-5 h-5" />,
-      href: "https://x.com/arielbatoon_com",
+      href: "https://x.com/arielbatoon_com/",
     },
     {
       name: "Facebook",
       icon: <Facebook className="w-5 h-5" />,
-      href: "https://www.facebook.com/itsarielbatoon",
+      href: "https://www.facebook.com/itsarielbatoon/",
     },
   ];
 
@@ -68,19 +68,18 @@ export function ContactContent() {
           </div>
           <h3 className="font-medium text-lg text-white">Connect with me</h3>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-4 gap-4">
           {socialLinks.map((social) => (
             <Link
               key={social.name}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-gray-300 hover:text-white transition-all p-3 rounded-lg hover:bg-white/5 border border-white/10"
+              className="group flex justify-center items-center text-gray-300 hover:text-white transition-all p-3 rounded-lg hover:bg-white/5 border border-white/10"
             >
-              <div className="p-1.5 rounded-md group-hover:bg-white/10 transition-colors">
+              <div className="p-1.5 rounded-md group-hover:bg-white/10 transition-colors flex items-center justify-center">
                 {social.icon}
               </div>
-              <span className="text-sm font-medium">{social.name}</span>
             </Link>
           ))}
         </div>
